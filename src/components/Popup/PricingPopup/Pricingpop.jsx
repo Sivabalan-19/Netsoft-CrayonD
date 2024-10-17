@@ -32,6 +32,7 @@ function Pricingpop({setOpenPricingDialog}) {
       primcolo: "#B3776D",
       secodcol: "#FEEAEA80",
     },
+    
   ];
 
   return (

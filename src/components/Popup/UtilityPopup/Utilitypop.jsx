@@ -76,6 +76,35 @@ function Utilitypop({setopenutilititiesDialog}) {
       enddate: "12 Fed",
       year: 23,
     },
+
+    {
+      name: "Amenities name",
+      prices: 20.0,
+      startdat: "Feb 22",
+      enddate: "12 Fed",
+      year: 23,
+    },
+    {
+      name: "Amenities name",
+      prices: 20.0,
+      startdat: "Feb 22",
+      enddate: "12 Fed",
+      year: 23,
+    },
+    {
+      name: "Amenities name",
+      prices: 20.0,
+      startdat: "Feb 22",
+      enddate: "12 Fed",
+      year: 23,
+    },
+    {
+      name: "Amenities name",
+      prices: 20.0,
+      startdat: "Feb 22",
+      enddate: "12 Fed",
+      year: 23,
+    },
   ];
 
   return (
