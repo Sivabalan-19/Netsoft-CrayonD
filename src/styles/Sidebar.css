@@ -1,0 +1,38 @@
+.Sidebarcont
+{
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+}
+.Sidebarcontso
+{
+    width: 100%;
+    height: 70%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+}
+
+.sidebariconcon
+{
+    background-color: #5078E1;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    border-radius: 30px;
+}
+
+.sidebari
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+}
