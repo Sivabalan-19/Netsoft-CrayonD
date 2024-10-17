@@ -11,21 +11,12 @@ import AmenitiPop from './components/Popup/AmenitiesPopup/AmenitiPop'
 function App() {
   return (
     <Box className='App'>
-      <Box className='Mainhead'>
-        <Head/>
-      </Box>
-
-      <Box className='Mainbody'>
-        
-        <Box className='MainSide'>
-          <Sidebar/>
-
-        </Box>
+      
         <Box className='MainSpa'>
           <MainPage/>
         
         </Box>
-      </Box>
+    
     </Box>
   )
 }

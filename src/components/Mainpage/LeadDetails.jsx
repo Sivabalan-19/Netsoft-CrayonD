@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/Threepage.css'
 import { Box } from '@mui/material'
 import { Grid2, Typography } from '@mui/material';
-import imag from '../../assets/login.png'
+import imag from '../../assets/image.png'
 import { TimelineDot } from '@mui/lab';
 
 
@@ -24,7 +24,7 @@ function LeadDetails() {
 
         <Box className="imgprofile">
 
-          <Box className="squimg"><img src={imag} alt="" style={{width:'80%', height:'80%'}} /></Box>
+          <Box className="squimg"><img src={imag} alt="" style={{width:'80%',borderRadius:'10px', height:'80%'}} /></Box>
           <Box className="imgcont">
 
               <Box className='pronamedet'> 
