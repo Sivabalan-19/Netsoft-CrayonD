@@ -9,12 +9,16 @@ import { useState } from "react";
 import Pricingpop from "../Popup/PricingPopup/Pricingpop";
 import Utilitypop from "../Popup/UtilityPopup/Utilitypop";
 import { Box } from "@mui/material";
+import RemovePop from "../Popup/RemovePopup/Remopop";
+import Discountpop from "../Popup/DiscountPopup/DiscountPop";
 
 export default function Menuicon() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [openPricingDialog, setOpenPricingDialog] = useState(false);
   const [openAmmunitiesDialog, setOpenAmmunitiesDialog] =useState(false);
   const [openutilititiesDialog, setopenutilititiesDialog] =useState(false);
+  const [openremovecom, setremovecom] =useState(false);
+  const [opendiscounDialog, setDiscountDialog] =useState(false);
   
 
   const open = Boolean(anchorEl);
@@ -57,6 +61,28 @@ export default function Menuicon() {
   };
 
 
+  const handleOpendiscountDialog = () =>
+  {
+    setDiscountDialog(true)
+    handleClose();
+  }
+
+  const handleclosediscountDialog =() =>
+  {
+    setDiscountDialog(false)
+  }
+
+
+  const  handleopenremovecom =() =>
+  {
+    setremovecom(true)
+    handleClose();
+  }
+
+  const handlecloseremovecom = () =>
+  {
+    setremovecom(false);
+  }
   return (
     <Box>
       <Button
@@ -93,8 +119,8 @@ export default function Menuicon() {
         </MenuItem>
         <MenuItem onClick={handleOpenAmmunitiesDialog}>Add Ammunities</MenuItem>
         <MenuItem onClick={handleOpenUtilityDialog}>Add Utilities</MenuItem>
-        <MenuItem onClick={handleClose}>Add Discount</MenuItem>
-        <MenuItem onClick={handleClose}>Remove Component</MenuItem>
+        <MenuItem onClick={handleOpendiscountDialog}>Add Discount</MenuItem>
+        <MenuItem onClick={handleopenremovecom}>Remove Component</MenuItem>
       </Menu>
 
       <Dialog
@@ -133,6 +159,36 @@ export default function Menuicon() {
         openutilititiesDialog={openutilititiesDialog}
         setopenutilititiesDialog={setopenutilititiesDialog} />
       </Dialog>
+
+
+
+      <Dialog
+        open={opendiscounDialog}
+        onClose={handleclosediscountDialog}
+        PaperProps={{
+          style: { height: "900px", minWidth: "1100px" },
+        }}
+      >
+        <Discountpop
+        setDiscountDialog={setDiscountDialog}
+         />
+      </Dialog>
+
+
+      <Dialog
+        open={openremovecom}
+        onClose={handlecloseremovecom}
+        PaperProps={{
+          style: { height: "900px", minWidth: "1100px" },
+        }}
+      >
+        <RemovePop
+        setremovecom={setremovecom}
+         />
+      </Dialog>
+
+
+   
     </Box>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/Threepage.css'
 import { Box } from '@mui/material'
-import { Grid2, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import imag from '../../assets/image.png'
 import { TimelineDot } from '@mui/lab';
 
@@ -46,18 +46,18 @@ function LeadDetails() {
 
       <Box className='profetials'>Quotation Details</Box>
 
-      <Grid2 container spacing={2} width="100%">
+      <Grid container spacing={2} width="100%">
       {data.map((item, index) => (
-        <Grid2 item xs={12} sm={6} md={4} key={index}> {/* 3 columns on medium screens and above */}
+        <Grid item xs={12} sm={6} md={4} key={index}>
           <Typography className="gridtite" variant="caption" color="#98A0AC" sx={{ fontSize: '10px' }}>
             {item.tite}
           </Typography>
           <Typography className="griddate" variant="body2" style={{ color: '#091B29', fontWeight: 700, fontSize: '12px' }}>
             {item.date}
           </Typography>
-        </Grid2>
+        </Grid>
       ))}
-    </Grid2>
+    </Grid>
       
     </Box>
   )

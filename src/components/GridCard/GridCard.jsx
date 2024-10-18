@@ -9,6 +9,8 @@ import { Box } from "@mui/material";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import "../../styles/Threepage.css";
 import CardActionArea from "@mui/material/CardActionArea";
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
 import Menuicon from "../MenuSidebar/Menuicon";
 function GridCard(props) {
   return (
@@ -24,21 +26,26 @@ function GridCard(props) {
         }}
       >
         <Box
-          style={{
-            height: "45%",
-            width: "95%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <CardMedia
-            component="img"
-            className="cardimgonle"
-            image={Gridimg}
-            alt="green iguana"
-          />
-        </Box>
+  style={{
+    height: "45%",
+    width: "95%",
+    display: "flex",
+    alignItems: "center",
+    position: 'relative',
+  }}
+>
+  <CardMedia
+    component="img"
+    className="cardimgonle"
+    image={Gridimg}
+    alt="green iguana"
+    style={{ width: '100%', height: '100%' }} // Ensure image fills the box
+  />
+  <Fab sx={{ position: 'absolute', display: 'flex', top: '5px', right: '5px', height: '2px', width: '20px' }}>
+    <AddIcon sx={{ fontSize: '12px' }} />
+  </Fab>
+</Box>
+
 
         <Box className="cardconten">
           <Box className="cardnampr">
