@@ -24,7 +24,7 @@ function LeadDetails() {
 
         <Box className="imgprofile">
 
-          <Box className="squimg"><img src={imag} alt="" style={{width:'80%',borderRadius:'10px', height:'80%'}} /></Box>
+          <Box className="squimg"><img src={imag} alt="" style={{width:'80%',borderRadius:'6px', height:'60%'}} /></Box>
           <Box className="imgcont">
 
               <Box className='pronamedet'> 
