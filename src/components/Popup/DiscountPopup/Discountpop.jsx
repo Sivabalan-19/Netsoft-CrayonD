@@ -186,7 +186,7 @@ function Discountpop({ setDiscountDialog }) {
                     key={index}
                     sx={{ minHeight: "16%", flexDirection: "column" }}
                   >
-                    <div
+                    <Box
                       style={{
                         display: "flex",
                         height: "50%",
@@ -201,9 +201,9 @@ function Discountpop({ setDiscountDialog }) {
                       <Box className="remoddelico">
                         <Box>${item.prix}</Box>
                       </Box>
-                    </div>
+                    </Box>
 
-                    <div
+                    <Box
                       style={{
                         display: "flex",
                         height: "50%",
@@ -212,7 +212,7 @@ function Discountpop({ setDiscountDialog }) {
                         justifyContent: "space-between",
                       }}
                     >
-                      <div
+                      <Box
                         style={{
                           color: "#98A0AC",
                           fontSize: "14px",
@@ -220,9 +220,9 @@ function Discountpop({ setDiscountDialog }) {
                         }}
                       >
                         Discount
-                      </div>
-                      <div className="discdrop">
-                        <div
+                      </Box>
+                      <Box className="discdrop">
+                        <Box
                           style={{
                             color: "#98A0AC",
                             fontSize: "12px",
@@ -230,16 +230,16 @@ function Discountpop({ setDiscountDialog }) {
                           }}
                         >
                           100,000
-                        </div>
-                        <div style={{ color: "#091B29" }}>
+                        </Box>
+                        <Box style={{ color: "#091B29" }}>
                           <Dropdown />
-                        </div>
-                      </div>
-                    </div>
+                        </Box>
+                      </Box>
+                    </Box>
                   </Box>
                 ))}
               </Box>
-              <div style={{ width: "100%", height: "30%" }}></div>
+              <Box style={{ width: "100%", height: "30%" }}></Box>
 
               <Box className="removefinal">
                 <Box>Final Total</Box>
