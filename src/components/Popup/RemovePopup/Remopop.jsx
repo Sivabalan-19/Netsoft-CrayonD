@@ -1,11 +1,14 @@
 import React from "react";
-import { Box, Button, Switch } from "@mui/material";
+import { Box, Button, Switch, IconButton  } from "@mui/material";
+
+
 
 import CloseIcon from "@mui/icons-material/Close";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import HotelOutlinedIcon from "@mui/icons-material/HotelOutlined";
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
+
 import house from "../../../assets/house.png";
 
 import BathtubOutlinedIcon from "@mui/icons-material/BathtubOutlined";
@@ -187,9 +190,9 @@ function RemovePop({setremovecom}) {
                     </Box>
                     <Box className="remoddelico">
                       <Box>${item.prix}</Box>
-                      <Box>
-                        <DeleteOutlineIcon sx={{ fontSize: "20px" }} />
-                      </Box>
+                      <IconButton  style={{height:'25px', borderRadius:'5px',backgroundColor:'#ffecec', width:'25px'}}>
+          <DeleteForeverOutlinedIcon sx={{color:'#FF4B4B', fontSize:'17px'}} />
+        </IconButton>
                     </Box>
                   </Box>
                 ))}

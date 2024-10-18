@@ -5,11 +5,11 @@ import CardMedia from "@mui/material/CardMedia";
 import Gridimg from "../../assets/Gridimg.png";
 import HotelOutlinedIcon from '@mui/icons-material/HotelOutlined';
 import BathtubOutlinedIcon from '@mui/icons-material/BathtubOutlined';
-import { Box } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import "../../styles/Threepage.css";
+import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 import CardActionArea from "@mui/material/CardActionArea";
-import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import Menuicon from "../MenuSidebar/Menuicon";
 function GridCard(props) {
@@ -39,11 +39,11 @@ function GridCard(props) {
     className="cardimgonle"
     image={Gridimg}
     alt="green iguana"
-    style={{ width: '100%', height: '100%' }} // Ensure image fills the box
+    style={{ width: '100%', height: '100%',position:'relative' }} // Ensure image fills the box
   />
-  <Fab sx={{ position: 'absolute', display: 'flex', top: '5px', right: '5px', height: '2px', width: '20px' }}>
-    <AddIcon sx={{ fontSize: '12px' }} />
-  </Fab>
+<IconButton  style={{position:'absolute', top:'10px',right:'10px',height:'25px', backgroundColor:'#ffffff', width:'25px'}}>
+          <DeleteForeverOutlinedIcon sx={{color:'#FF4B4B', fontSize:'17px'}} />
+        </IconButton>
 </Box>
 
 

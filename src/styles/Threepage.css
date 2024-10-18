@@ -178,6 +178,8 @@
 .cardimgonle
 {
     height: 90%;
+    width: 90%;
+    position: relative;
     border-radius: 4px;
     background-size: contain;
 }
@@ -262,11 +264,17 @@
 }
 
 
-.css-1ewo90p-MuiButtonBase-root-MuiFab-root 
+.css-djw9hb-MuiButtonBase-root-MuiFab-root
 {
-    min-height: 10px;
+    max-height: 10px;
 }
 
+
+.icodn
+{
+    height: 1rem !important;
+    z-index: 500;
+}
 
 
 
