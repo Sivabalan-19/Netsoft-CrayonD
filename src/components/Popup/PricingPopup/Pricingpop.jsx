@@ -4,6 +4,8 @@ import { Box } from "@mui/material";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "../../../styles/Popupstye/Pricepop.css";
+import Card from "@mui/material/Card";
+
 function Pricingpop({setOpenPricingDialog}) {
   const listofpri = [
     { sno: 1, conte: "Primary", primcolo: "#B3776D", secodcol: "#FEEAEA80" },
@@ -46,7 +48,7 @@ function Pricingpop({setOpenPricingDialog}) {
 
       <Box className="pricingpopcon">
         {listofpri.map((item, index) => (
-          <Box
+          <Card
             className="pricepopdiv"
             key={index}
             style={{ backgroundColor: item.secodcol }}
@@ -69,7 +71,7 @@ function Pricingpop({setOpenPricingDialog}) {
                 <ArrowForwardIosIcon sx={{ color: item.primcolo }} />
               </Box>
             </Box>
-          </Box>
+          </Card>
         ))}
       </Box>
     </Box>
