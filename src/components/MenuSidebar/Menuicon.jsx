@@ -15,11 +15,10 @@ import Discountpop from "../Popup/DiscountPopup/DiscountPop";
 export default function Menuicon() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [openPricingDialog, setOpenPricingDialog] = useState(false);
-  const [openAmmunitiesDialog, setOpenAmmunitiesDialog] =useState(false);
-  const [openutilititiesDialog, setopenutilititiesDialog] =useState(false);
-  const [openremovecom, setremovecom] =useState(false);
-  const [opendiscounDialog, setDiscountDialog] =useState(false);
-  
+  const [openAmmunitiesDialog, setOpenAmmunitiesDialog] = useState(false);
+  const [openutilititiesDialog, setopenutilititiesDialog] = useState(false);
+  const [openremovecom, setremovecom] = useState(false);
+  const [opendiscounDialog, setDiscountDialog] = useState(false);
 
   const open = Boolean(anchorEl);
 
@@ -49,8 +48,6 @@ export default function Menuicon() {
     setOpenAmmunitiesDialog(false);
   };
 
-
-  
   const handleOpenUtilityDialog = () => {
     setopenutilititiesDialog(true);
     handleClose(); // Close the menu
@@ -60,29 +57,23 @@ export default function Menuicon() {
     setopenutilititiesDialog(false);
   };
 
-
-  const handleOpendiscountDialog = () =>
-  {
-    setDiscountDialog(true)
+  const handleOpendiscountDialog = () => {
+    setDiscountDialog(true);
     handleClose();
-  }
+  };
 
-  const handleclosediscountDialog =() =>
-  {
-    setDiscountDialog(false)
-  }
+  const handleclosediscountDialog = () => {
+    setDiscountDialog(false);
+  };
 
-
-  const  handleopenremovecom =() =>
-  {
-    setremovecom(true)
+  const handleopenremovecom = () => {
+    setremovecom(true);
     handleClose();
-  }
+  };
 
-  const handlecloseremovecom = () =>
-  {
+  const handlecloseremovecom = () => {
     setremovecom(false);
-  }
+  };
   return (
     <Box>
       <Button
@@ -131,8 +122,8 @@ export default function Menuicon() {
         }}
       >
         <Pricingpop
-        openPricingDialog={openPricingDialog}
-        setOpenPricingDialog={setOpenPricingDialog}
+          openPricingDialog={openPricingDialog}
+          setOpenPricingDialog={setOpenPricingDialog}
         />
       </Dialog>
 
@@ -143,9 +134,10 @@ export default function Menuicon() {
           style: { height: "800px", width: "500px" },
         }}
       >
-        <AmenitiPop 
-        openAmmunitiesDialog={openAmmunitiesDialog}
-        setOpenAmmunitiesDialog={setOpenAmmunitiesDialog} />
+        <AmenitiPop
+          openAmmunitiesDialog={openAmmunitiesDialog}
+          setOpenAmmunitiesDialog={setOpenAmmunitiesDialog}
+        />
       </Dialog>
 
       <Dialog
@@ -156,11 +148,10 @@ export default function Menuicon() {
         }}
       >
         <Utilitypop
-        openutilititiesDialog={openutilititiesDialog}
-        setopenutilititiesDialog={setopenutilititiesDialog} />
+          openutilititiesDialog={openutilititiesDialog}
+          setopenutilititiesDialog={setopenutilititiesDialog}
+        />
       </Dialog>
-
-
 
       <Dialog
         open={opendiscounDialog}
@@ -169,11 +160,8 @@ export default function Menuicon() {
           style: { height: "900px", minWidth: "1100px" },
         }}
       >
-        <Discountpop
-        setDiscountDialog={setDiscountDialog}
-         />
+        <Discountpop setDiscountDialog={setDiscountDialog} />
       </Dialog>
-
 
       <Dialog
         open={openremovecom}
@@ -182,13 +170,8 @@ export default function Menuicon() {
           style: { height: "900px", minWidth: "1100px" },
         }}
       >
-        <RemovePop
-        setremovecom={setremovecom}
-         />
+        <RemovePop setremovecom={setremovecom} />
       </Dialog>
-
-
-   
     </Box>
   );
 }

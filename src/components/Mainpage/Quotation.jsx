@@ -2,7 +2,6 @@ import React from "react";
 import "../../styles/MainSpace.css";
 import { Box } from "@mui/material";
 
-
 function Quotation() {
   return (
     <Box className="Quotationdiv">
@@ -43,14 +42,16 @@ function Quotation() {
                 <Box className="prie">$ 3,600.00</Box>
               </Box>
             </Box>
-            <Box style={{height:'59%'}}>
-
-            </Box>
+            <Box style={{ height: "59%" }}></Box>
             <Box className="totoal">
               <Box className="amoudiscol">
-                <Box className="totalcm" style={{fontWeight:'600'}}>Total Amount</Box>
-          
-                <Box className="prie" style={{fontWeight:'600'}}>$ 3,600.00</Box>
+                <Box className="totalcm" style={{ fontWeight: "600" }}>
+                  Total Amount
+                </Box>
+
+                <Box className="prie" style={{ fontWeight: "600" }}>
+                  $ 3,600.00
+                </Box>
               </Box>
             </Box>
           </Box>

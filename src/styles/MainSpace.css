@@ -1,74 +1,63 @@
-.MainSpacecon
-{
-    height: 100%;
-    width: 100%;
+.MainSpacecon {
+  height: 100%;
+  width: 100%;
 }
 
-.Subheadcon
-{
-    height: 6%;
-    background-color: #FFFFFF;
-    box-shadow: 0px 0px 12px #00000014;
-    width: 100%;
+.Subheadcon {
+  height: 6%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 12px #00000014;
+  width: 100%;
 }
 
-
-.MainSpecon{
-    height: 94%;
-    width: 100%;
-    background-color: #F5F7FA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.MainSpecon {
+  height: 94%;
+  width: 100%;
+  background-color: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.MainContainer
-{
-    background-color: #FFFFFF;
-    box-shadow: 0px 0px 12px #00000014;
-    height: 96%;
-    width: 96%;
-    border-radius: 12px;
+.MainContainer {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 12px #00000014;
+  height: 96%;
+  width: 96%;
+  border-radius: 12px;
 }
 
-
-.Mainsubhed
-{
-    height: 10%;
-    box-shadow: 0px 0px 12px #00000014;
-    width: 100%;
+.Mainsubhed {
+  height: 10%;
+  box-shadow: 0px 0px 12px #00000014;
+  width: 100%;
 }
 
-
-.Mainwork
-{
-    height: 77%;
-    width: 100%;
-    /* background-color: aquamarine; */
+.Mainwork {
+  height: 77%;
+  width: 100%;
+  /* background-color: aquamarine; */
 }
 
-
-.Mainbot
-{
-    height: 13%;
-    width: 100%;
+.Mainbot {
+  height: 13%;
+  width: 100%;
 }
 
-.Leaddetwork, .Quotawork
-{
-    width: 33%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.Leaddetwork,
+.Quotawork {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.unitdetwork
-{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34%;
-    background-color: #F5F7FAE6;
+.unitdetwork {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34%;
+  background-color: #f5f7fae6;
 }

@@ -1,18 +1,16 @@
 import React from "react";
-import { Box, Button, Switch, IconButton  } from "@mui/material";
-
-
+import { Box, Button, Switch, IconButton } from "@mui/material";
 
 import CloseIcon from "@mui/icons-material/Close";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import HotelOutlinedIcon from "@mui/icons-material/HotelOutlined";
-import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
+import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
 
 import house from "../../../assets/house.png";
 
 import BathtubOutlinedIcon from "@mui/icons-material/BathtubOutlined";
-function RemovePop({setremovecom}) {
+function RemovePop({ setremovecom }) {
   const data = [
     { detail: "Bill Name Here", prix: 1000 },
     { detail: "Bill Name Here", prix: 1000 },
@@ -27,7 +25,7 @@ function RemovePop({setremovecom}) {
         sx={{ height: "7%", width: "95%", borderBottom: "0" }}
       >
         <Box sx={{ fontWeight: "700" }}>Remove Component</Box>
-        <Box sx={{ color: "#7C8594" }} onClick = {() => setremovecom(false)}>
+        <Box sx={{ color: "#7C8594" }} onClick={() => setremovecom(false)}>
           <CloseIcon />
         </Box>
       </Box>
@@ -190,14 +188,21 @@ function RemovePop({setremovecom}) {
                     </Box>
                     <Box className="remoddelico">
                       <Box>${item.prix}</Box>
-                      <IconButton  style={{height:'25px', borderRadius:'5px',backgroundColor:'#ffecec', width:'25px'}}>
-          <DeleteForeverOutlinedIcon sx={{color:'#FF4B4B', fontSize:'17px'}} />
-        </IconButton>
+                      <IconButton
+                        style={{
+                          height: "25px",
+                          borderRadius: "5px",
+                          backgroundColor: "#ffecec",
+                          width: "25px",
+                        }}
+                      >
+                        <DeleteForeverOutlinedIcon
+                          sx={{ color: "#FF4B4B", fontSize: "17px" }}
+                        />
+                      </IconButton>
                     </Box>
                   </Box>
                 ))}
-
-               
               </Box>
 
               <Box className="removefinal">

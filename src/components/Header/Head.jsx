@@ -5,7 +5,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SearchIcon from "@mui/icons-material/Search";
 import logo from "../../assets/logo.png";
-import img from '../../assets/login.png'
+import img from "../../assets/login.png";
 function Head() {
   return (
     <Box className="HeaderBox">

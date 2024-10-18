@@ -1,19 +1,15 @@
-.bottomcont
-{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.bottomcont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.botomxo
-{
-    height: 100%;
-    width: 97%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.botomxo {
+  height: 100%;
+  width: 97%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

@@ -7,15 +7,15 @@ function Bottom() {
   return (
     <Box className="bottomcont">
       <Box className="botomxo">
-        <Box style={{height:'100%', display:'flex', alignItems:'center'}}>
+        <Box style={{ height: "100%", display: "flex", alignItems: "center" }}>
           <Button
             variant="outlined"
             sx={{
               backgroundColor: "#ffff",
               color: "Black",
               textTransform: "none",
-              height:'50%',
-              fontWeight:'600',
+              height: "50%",
+              fontWeight: "600",
               border: "2px solid #E4E8EE",
             }}
           >
@@ -23,15 +23,24 @@ function Bottom() {
           </Button>
         </Box>
 
-        <Box style={{ display: "flex", gap:'10px' , height:'100%', alignItems:'center'}}>
-          <Box style={{height:'100%', display:'flex',alignItems:'center'}}>
+        <Box
+          style={{
+            display: "flex",
+            gap: "10px",
+            height: "100%",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            style={{ height: "100%", display: "flex", alignItems: "center" }}
+          >
             <Button
               variant="outlined"
               sx={{
                 backgroundColor: "#ffff",
                 color: "Black",
-                fontWeight:'600',
-                height:'50%',
+                fontWeight: "600",
+                height: "50%",
                 textTransform: "none",
                 border: "2px solid #E4E8EE",
               }}
@@ -39,11 +48,18 @@ function Bottom() {
               Cancel
             </Button>
           </Box>
-          <Box style={{height:'100%',display:'flex',alignItems:'center'}}>
+          <Box
+            style={{ height: "100%", display: "flex", alignItems: "center" }}
+          >
             <Button
               variant="contained"
-              sx={{ backgroundColor: "#5078E1",
-                fontWeight:'600',textTransform: 'none' ,height:'50%', color: "white" }}
+              sx={{
+                backgroundColor: "#5078E1",
+                fontWeight: "600",
+                textTransform: "none",
+                height: "50%",
+                color: "white",
+              }}
             >
               Create Quotation
             </Button>

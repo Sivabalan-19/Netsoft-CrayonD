@@ -1,74 +1,61 @@
-.SubheadCont
-{
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    background-color: #FFFFFF;
+.SubheadCont {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  background-color: #ffffff;
 }
 
-.iconhead
-{
-    display: flex;
-    align-items: center;
-    color: #071741;
-    gap: 10px;
-    font-weight: 600;
+.iconhead {
+  display: flex;
+  align-items: center;
+  color: #071741;
+  gap: 10px;
+  font-weight: 600;
 }
 
-.subheadbox
-{
-    height: 100%;
-    width: 96%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.subheadbox {
+  height: 100%;
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.arrowcon
-{
-    background-color: #E4E8EE;
-    height: 24px;
-    width: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
+.arrowcon {
+  background-color: #e4e8ee;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
 }
 
-.subheadDrop
-{
-    width: 12%;
-    margin-right: 2%;
-    display: flex;
-    justify-content: end;
+.subheadDrop {
+  width: 12%;
+  margin-right: 2%;
+  display: flex;
+  justify-content: end;
 }
-
-
-
 
 /* ---------------Main Sub Head-------------- */
 
-
-
-.mainsub
-{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center ;
+.mainsub {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.indsub
-{
-    width: 97%;
-    font-size: 15px;
-    color: #5078E1;
-    align-items: center;
-    display: flex;
-    height: 100%;
+.indsub {
+  width: 97%;
+  font-size: 15px;
+  color: #5078e1;
+  align-items: center;
+  display: flex;
+  height: 100%;
 }

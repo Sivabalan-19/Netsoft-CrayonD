@@ -6,7 +6,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "../../../styles/Popupstye/Pricepop.css";
 import Card from "@mui/material/Card";
 
-function Pricingpop({setOpenPricingDialog}) {
+function Pricingpop({ setOpenPricingDialog }) {
   const listofpri = [
     { sno: 1, conte: "Primary", primcolo: "#B3776D", secodcol: "#FEEAEA80" },
     { sno: 2, conte: "Secondary", primcolo: "#896DB3", secodcol: "#EDE4FE80" },
@@ -34,14 +34,16 @@ function Pricingpop({setOpenPricingDialog}) {
       primcolo: "#B3776D",
       secodcol: "#FEEAEA80",
     },
-    
   ];
 
   return (
     <Box className="pricepopcon">
       <Box className="pricehed">
         <Box sx={{ fontWeight: "700" }}>Pricing Table</Box>
-        <Box sx={{ color: "#7C8594" }} onClick={() => setOpenPricingDialog(false)}>
+        <Box
+          sx={{ color: "#7C8594" }}
+          onClick={() => setOpenPricingDialog(false)}
+        >
           <CloseIcon />
         </Box>
       </Box>
