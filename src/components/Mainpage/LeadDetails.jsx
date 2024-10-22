@@ -49,7 +49,7 @@ function LeadDetails() {
               className="gridtite"
               variant="caption"
               color="#98A0AC"
-              sx={{ fontSize: "10px" }}
+              sx={{ fontSize: "8px" }}
             >
               {item.tite}
             </Typography>

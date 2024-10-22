@@ -1,6 +1,12 @@
+*
+{
+  font-family: "Nunito Sans" !important;
+}
+
+
 body {
   margin: 0;
-
+  font-family: "Nunito Sans" !important;
   padding: 0;
 }
 
@@ -30,4 +36,11 @@ body {
 .MainSpa {
   width: 100%;
   height: 100%;
+}
+
+
+.Singlepage
+{
+  height: 100%;
+  width: 100%;
 }

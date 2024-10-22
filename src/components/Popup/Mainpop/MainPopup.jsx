@@ -9,9 +9,8 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import house from "../../../assets/house.png";
 import Dropdown from "../../Dropdown/AEDdropdown";
 import BathtubOutlinedIcon from "@mui/icons-material/BathtubOutlined";
-function Discountpop({ setDiscountDialog }) {
+function Discountpop({ setopenmainpop }) {
   const data = [
-    { detail: "Bill Name Here", prix: 1000 },
     { detail: "Bill Name Here", prix: 1000 },
     { detail: "Bill Name Here", prix: 1000 },
     { detail: "Bill Name Here", prix: 1000 },
@@ -23,8 +22,8 @@ function Discountpop({ setDiscountDialog }) {
         className="pricehed"
         sx={{ height: "7%", width: "95%", borderBottom: "0" }}
       >
-        <Box sx={{ fontWeight: "700" }}>Add Discount To Unit</Box>
-        <Box sx={{ color: "#7C8594", display:'flex',alignItems:'center'}} onClick={() => setDiscountDialog(false)}>
+        <Box sx={{ fontWeight: "700" }}>Unit Details</Box>
+        <Box sx={{ color: "#7C8594", display:'flex',alignItems:'center'}} onClick={() => setopenmainpop(false)}>
           <CloseIcon />
         </Box>
       </Box>
@@ -192,7 +191,7 @@ function Discountpop({ setDiscountDialog }) {
           </Box>
         </Box>
         <Box className="wholeright">
-          <Box className="wholerightin">
+          <Box className="wholerightin" sx={{height:'100%'}}>
             <Box className="wholerighed">UNIT PRICE DETAIL</Box>
 
             <Box className="removecomitem">
@@ -238,22 +237,8 @@ function Discountpop({ setDiscountDialog }) {
                       >
                         Discount
                       </Box>
-                      <Box className="discdrop" sx={{borderRadius:'10px 10px 10px 10px'}}>
-                        <Box
-                          style={{
-                            color: "#98A0AC",
-                            fontSize: "12px",
-                            height:'22px',
-                            fontStyle: "italic",
-                            borderRadius:'4px 0px 0px 4px'
-                          }}
-                        >
-                          100,000
-                        </Box>
-                        <Box style={{ color: "#091B29",
-                            borderRadius:'0px 4px 4px 0px' }}>
-                          <Dropdown />
-                        </Box>
+                      <Box className="discdrop" sx={{color:'#98A0AC', fontSize:'12px'}}>
+                        10%
                       </Box>
                     </Box>
                   </Box>
@@ -267,18 +252,7 @@ function Discountpop({ setDiscountDialog }) {
               </Box>
             </Box>
           </Box>
-          <Box className="removbutcon">
-            <Button
-              variant="contained"
-              sx={{
-                width: "100%",
-                textTransform: "none",
-                backgroundColor: "#5078E1",
-              }}
-            >
-              Update & Save
-            </Button>
-          </Box>
+         
         </Box>
       </Box>
     </Box>

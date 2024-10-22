@@ -28,11 +28,16 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
   const [activeTab, setActiveTab] = useState("Lease");
   const Chargeble = ["Yes", "No"];
 
+  const [gstvalue,setgstvalue] = useState('');
+  const [pricing,setpricing] = useState('')
+
+
+
   return (
     <div className="innerpopcon">
       <Box className="pricehed" sx={{ height: "7%", width: "95%" }}>
         <Box sx={{ fontWeight: "700" }}>Add Discount To Unit</Box>
-        <Box sx={{ color: "#7C8594" }} onClick={() => setOpenOtherPopup(false)}>
+        <Box sx={{ color: "#7C8594",display:'flex', alignItems:'center' }} onClick={() => setOpenOtherPopup(false)}>
           <CloseIcon />
         </Box>
       </Box>
@@ -73,6 +78,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
             {categories.map((category) => (
               <Button
                 key={category}
+                sx={{textTransform:'none', fontWeight:'600'}}
                 className={activeTab === category ? "active" : ""}
                 onClick={() => setActiveTab(category)}
               >
@@ -89,6 +95,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
               <Select
                 displayEmpty
                 IconComponent={FaChevronDown}
+                value={pricing}
                 className="pricing-buttons-gst"
                 sx={{
                   height: "40px",
@@ -131,11 +138,13 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
         }}
       >
         <Box className="col" sx={{ width: "55%" }}>
-          <Box>Pricing Component</Box>
+          <Box>Tax Group For Pricing Component</Box>
           <Box>
             <FormControl size="small">
               <Select
                 displayEmpty
+                value={gstvalue}
+                onChange={() => setgstvalue(taget.value)}
                 IconComponent={FaChevronDown}
                 className="pricing-buttons-gst"
                 sx={{
@@ -160,10 +169,10 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
                   },
                 }}
               >
-                <MenuItem value="" disabled>
-                  Pricing Component
+                <MenuItem value="" hidden>
+                  GST
                 </MenuItem>
-                <MenuItem value={10}>GST 1</MenuItem>
+                <MenuItem value={10} >GST 1</MenuItem>
                 <MenuItem value={20}>GST 2</MenuItem>
                 <MenuItem value={30}>GST 3</MenuItem>
               </Select>
@@ -176,6 +185,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
             {Chargeble.map((category) => (
               <Button
                 key={category}
+                sx={{textTransform:'none', fontWeight:'600'}}
                 className={act === category ? "active" : ""}
                 onClick={() => setact(category)}
               >
@@ -189,10 +199,10 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
       <Box
         className="biginput"
         sx={{
-          height: "20%",
-          marginTop: "0",
+          height: "12%",
+
+          marginTop: "10px",
           width: "92%",
-          justifyContent: "center",
         }}
       >
         <Box
@@ -216,6 +226,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
               fontSize: "14px",
               height: "100%",
               width: "30%",
+              marginRight:'15px',
               display: "flex",
               justifyContent: "end",
               alignItems: "center",
@@ -246,9 +257,10 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
               value={item.value}
               sx={{
                 width: "90%",
+                marginTop:'5px',
                 "& .MuiLinearProgress-bar": {
                   borderRadius: "5px",
-                  backgroundColor: item.color, // Replace with your desired color
+                  backgroundColor: item.color, 
                 },
                 backgroundColor: "#E4E8EE",
                 borderRadius: "5px",
@@ -258,7 +270,9 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
               style={{
                 height: "35%",
                 width: "90%",
-                border: "1px solid gray",
+                marginTop:'10px',
+                border: "1px solid #E4E8EE",
+                borderRadius:'4px',
                 display: "grid",
                 placeItems: "center",
               }}
@@ -276,6 +290,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
         <Box>
           <Button
             variant="outlined"
+            onClick={() => setOpenOtherPopup(false)}
             sx={{
               backgroundColor: "#ffff",
               color: "Black",

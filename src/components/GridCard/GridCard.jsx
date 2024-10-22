@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "@mui/material/Card";
+import Dialog from "@mui/material/Dialog";
+
 import "../../styles/Head.css";
 import CardMedia from "@mui/material/CardMedia";
 import Gridimg from "../../assets/Gridimg.png";
@@ -12,10 +14,19 @@ import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined
 import CardActionArea from "@mui/material/CardActionArea";
 import AddIcon from "@mui/icons-material/Add";
 import Menuicon from "../MenuSidebar/Menuicon";
+import MainPopup from "../Popup/Mainpop/MainPopup";
 function GridCard(props) {
+  const [openmainpop, setopenmainpop] = useState(false)
+
+  const closepopup  = () =>
+  {
+    setopenmainpop(false)
+  }
   return (
-    <Card sx={{ width: "100%", height: "100%", display: "flex" }}>
+    <Card sx={{ width: "99%", height: "100%", display: "flex" , border:'1px solid #E4E8EE', borderRadius:'6px', boxShadow: 'none' }}>
       <CardActionArea
+                
+
         sx={{
           width: "100%",
           height: "100%",
@@ -28,13 +39,15 @@ function GridCard(props) {
         <Box
           style={{
             height: "45%",
-            width: "95%",
+            width: "92%",
+            marginTop:'11px',
             display: "flex",
             alignItems: "center",
             position: "relative",
           }}
         >
           <CardMedia
+          onClick = {() => setopenmainpop(true)}
             component="img"
             className="cardimgonle"
             image={Gridimg}
@@ -64,7 +77,7 @@ function GridCard(props) {
           </Box>
 
           <Box className="cardsq">
-            <Box>{props.smaitit}</Box>
+            <Box sx={{fontSize:''}}>{props.smaitit}</Box>
             <Box className="dot"></Box>
             <Box>{props.sqft}</Box>
           </Box>
@@ -72,31 +85,41 @@ function GridCard(props) {
           <Box className="iconsanddot">
             <Box className="iconndnum">
               <Box className="aligences">
-                <HotelOutlinedIcon />
+                <HotelOutlinedIcon sx={{fontSize:'18px'}} />
               </Box>
               <Box className="aligences">{props.bed}</Box>
             </Box>
             <Box className="dot"></Box>
             <Box className="iconndnum">
               <Box className="aligences">
-                <BathtubOutlinedIcon />
+                <BathtubOutlinedIcon sx={{fontSize:'18px'}}  />
               </Box>
               <Box className="aligences">{props.tub}</Box>
             </Box>
             <Box className="dot"></Box>
             <Box className="iconndnum">
               <Box className="aligences">
-                <HomeOutlinedIcon />
+                <HomeOutlinedIcon sx={{fontSize:'18px'}} />
               </Box>
               <Box className="aligences">{props.home}BHK</Box>
             </Box>
           </Box>
 
-          <Box className="customx">
-            <Menuicon />
-          </Box>
+            <Box className="customx">
+              <Menuicon />
+            </Box>
         </Box>
       </CardActionArea>
+
+      <Dialog
+        open={openmainpop}
+        onClose={closepopup}
+        PaperProps={{
+          style: { height: "700px", minWidth: "900px" },
+        }}
+      >
+        <MainPopup  setopenmainpop={setopenmainpop}/>
+      </Dialog>
     </Card>
   );
 }

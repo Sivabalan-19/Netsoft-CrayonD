@@ -54,7 +54,7 @@ function Pricingpop({ setOpenPricingDialog }) {
   return (
     <Box className="pricepopcon">
       <Box className="pricehed">
-        <Box sx={{ fontWeight: "700" }}>Pricing Table</Box>
+        <Box sx={{ fontWeight: "800" }}>Pricing Table</Box>
         <Box
           sx={{ color: "#7C8594" }}
           onClick={() => setOpenPricingDialog(false)}
@@ -66,6 +66,7 @@ function Pricingpop({ setOpenPricingDialog }) {
       <Box className="pricingpopcon">
         {listofpri.map((item, index) => (
           <Card
+          sx={{boxShadow:'none'}}
             className="pricepopdiv"
             key={index}
             style={{ backgroundColor: item.secodcol }}

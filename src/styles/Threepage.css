@@ -22,7 +22,7 @@
   height: 10%;
   display: flex;
   align-items: center;
-  font-weight: 500;
+  font-weight: bold;
   color: #4e5a6b;
   font-size: 14px;
 }
@@ -124,7 +124,7 @@
 
 .unitheadet {
   height: 10%;
-  font-weight: 500;
+  font-weight: bold;
   width: 100%;
   color: #4e5a6b;
   display: flex;
@@ -140,7 +140,7 @@
 }
 
 .cardconten {
-  width: 95%;
+  width: 92%;
   height: 55%;
 }
 
@@ -192,11 +192,16 @@
   height: 15%;
 }
 
+.cardsq div
+{
+  font-size: 12px;
+}
+
 .iconsanddot {
   height: 25%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 100%;
 }
 
@@ -235,7 +240,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  font-weight: 500;
+  font-weight: bold;
   color: #4e5a6b;
   font-size: 15px;
 }
@@ -294,6 +299,7 @@
 
 .totalcm {
   width: 45%;
+  font-weight: 600;
   font-size: 14px;
   color: #4e5a6b;
 }
@@ -333,4 +339,22 @@
 
 .totoal {
   border-top: 1px solid #e4e8ee;
+}
+
+
+.css-1toxriw-MuiList-root-MuiMenu-list
+{
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.MuiMenu-list
+{
+  color:#4E5A6B;
+}
+
+.css-1rju2q6-MuiButtonBase-root-MuiMenuItem-root+.MuiDivider-root
+{
+  margin: 0 !important;
 }

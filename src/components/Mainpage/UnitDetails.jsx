@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/MainSpace.css";
+import Dialog from "@mui/material/Dialog";
 import { Box } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import GridCard from "../GridCard/GridCard";
+import MainPopup from "../Popup/Mainpop/MainPopup";
 
 function UnitDetails() {
+
+ 
+
   const data = [
     {
       tit: "Jumeirah Estate",
@@ -74,6 +79,8 @@ function UnitDetails() {
           ))}
         </Grid>
       </Box>
+
+      
     </Box>
   );
 }

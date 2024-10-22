@@ -4,7 +4,7 @@ import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { Box, Button, FormControl, Select, MenuItem } from "@mui/material";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import PricingDropdown from "../../Dropdown/PricingDropdown";
+import PricingDropdown from "../../Dropdown/PricingDropdown"; 
 import PrimaryInener from "./PrimaryInener";
 
 import { FaChevronDown } from "react-icons/fa";
@@ -47,7 +47,7 @@ function InnerPricingpopup({ selectedItem, setOpenPopup }) {
             color: selectedItem.primcolo,
           }}
         >
-          <Box sx={{ marginLeft: "7px" }}>{selectedItem.conte} Component</Box>
+          <Box sx={{ marginLeft: "7px", width:'80%' }}>{selectedItem.conte} Component</Box>
           <Box style={{ justifyContent: "end", marginRight: "12px" }}>
             <InfoOutlinedIcon />
           </Box>
@@ -61,6 +61,7 @@ function InnerPricingpopup({ selectedItem, setOpenPopup }) {
             {categories.map((category) => (
               <Button
                 key={category}
+                sx={{textTransform:'none', fontWeight:'600'}}
                 className={activeTab === category.name ? "active" : ""}
                 onClick={() => setActiveTab(category.name)}
               >
@@ -158,6 +159,7 @@ function InnerPricingpopup({ selectedItem, setOpenPopup }) {
                 {Chargeable.map((category) => (
                   <Button
                     key={category.id}
+                    sx={{textTransform:'none', fontWeight:'600'}}
                     className={act === category.label ? "active" : ""}
                     onClick={() => setact(category.label)}
                   >
@@ -172,6 +174,7 @@ function InnerPricingpopup({ selectedItem, setOpenPopup }) {
                 {Component.map((category) => (
                   <Button
                     key={category}
+                    sx={{textTransform:'none', fontWeight:'600'}}
                     className={act1 === category.label ? "active" : ""}
                     onClick={() => setact1(category.label)}
                   >
@@ -197,6 +200,7 @@ function InnerPricingpopup({ selectedItem, setOpenPopup }) {
                 fontSize: "14px",
                 height: "100%",
                 width: "30%",
+                marginRight:'15px',
                 display: "flex",
                 justifyContent: "end",
                 alignItems: "center",
@@ -211,6 +215,7 @@ function InnerPricingpopup({ selectedItem, setOpenPopup }) {
           <Box>
             <Button
               variant="outlined"
+              onClick={() => setOpenPopup(false)}
               sx={{
                 backgroundColor: "#ffff",
                 color: "Black",

@@ -52,8 +52,8 @@ function Quotation() {
             <Box style={{ height: "59%" }}></Box>
             <Box className="totoal">
               <Box className="amoudiscol">
-                <Box className="totalcm" style={{ fontWeight: "600" }}>
-                  Total Amount
+                <Box className="totalcm" style={{ fontWeight: "bold" }}>
+                  Quote Amount
                 </Box>
 
                 <Box className="prie" style={{ fontWeight: "600" }}>

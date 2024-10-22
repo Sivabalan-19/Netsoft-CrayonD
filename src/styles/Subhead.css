@@ -39,6 +39,7 @@
   margin-right: 2%;
   display: flex;
   justify-content: end;
+  align-items: end;
 }
 
 /* ---------------Main Sub Head-------------- */
@@ -47,14 +48,17 @@
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .indsub {
-  width: 97%;
-  font-size: 15px;
+  width: 50%;
+  font-size: 14px;
+  font-weight: 600;
   color: #5078e1;
+  margin-left: 1%;
+  display: flex;
+  gap: 5px;
   align-items: center;
   display: flex;
   height: 100%;

@@ -31,7 +31,7 @@ function RemovePop({ setremovecom }) {
       </Box>
 
       <Box className="wholediscount">
-        <Box className="wholeleft">
+      <Box className="wholeleft">
           <Box className="wholeleftin">
             <Box className="imagecont">
               <Box className="imagecontin">
@@ -47,42 +47,60 @@ function RemovePop({ setremovecom }) {
                   />
                 </Box>
                 <Box className="imagertight">
-                  <img
-                    src={house}
-                    alt="no"
-                    style={{
-                      height: "100%",
-                      borderRadius: "8px",
-                      width: "100%",
-                    }}
-                  />
-                  <img
-                    src={house}
-                    alt="no"
-                    style={{
-                      height: "100%",
-                      borderRadius: "8px",
-                      width: "100%",
-                    }}
-                  />
-                  <img
-                    src={house}
-                    alt="no"
-                    style={{
-                      height: "100%",
-                      borderRadius: "8px",
-                      width: "100%",
-                    }}
-                  />
-                  <img
-                    src={house}
-                    alt="no"
-                    style={{
-                      height: "100%",
-                      borderRadius: "8px",
-                      width: "100%",
-                    }}
-                  />
+  
+                    <Box
+                      sx={{ display: "flex", justifyContent: "space-between", height:'48%',gap:'7px' }}
+                    >
+                      <Box sx={{height:'100%', width:'50%'}}>
+                        <img
+                          src={house}
+                          alt="no"
+                          style={{
+                            height: "100%",
+                            borderRadius: "8px",
+                            width: "100%",
+                          }}
+                        />
+                      </Box>
+                      <Box sx={{height:'100%', width:'50%'}}>
+                        <img
+                          src={house}
+                          alt="no"
+                          style={{
+                            height: "100%",
+                            borderRadius: "8px",
+                            width: "100%",
+                          }}
+                        />
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{ display: "flex", justifyContent: "space-between", height:'48%',gap:'10px' }}
+                    >
+                      <Box sx={{height:'100%', width:'50%'}}>
+                        <img
+                          src={house}
+                          alt="no"
+                          style={{
+                            height: "100%",
+                            borderRadius: "8px",
+                            width: "100%",
+                          }}
+                        />
+                      </Box>
+                      <Box sx={{height:'100%', width:'50%'}}>
+                        <img
+                          src={house}
+                          alt="no"
+                          style={{
+                            height: "100%",
+                            borderRadius: "8px",
+                            width: "100%",
+                          }}
+                        />
+                      </Box>
+                    </Box>
+          
                 </Box>
               </Box>
             </Box>
@@ -106,18 +124,18 @@ function RemovePop({ setremovecom }) {
                 Rubix Apartment, K Tower, Floor 1
               </Box>
               <Box>
-                <Box
+              <Box
                   className="iconsanddot"
                   sx={{
-                    width: "70%",
+                    width: "80%",
                     height: "100%",
                     display: "flex",
                     alignItems: "center",
                   }}
                 >
-                  <Box className="iconndnum" sx={{ width: "15%" }}>
+                  <Box className="iconndnum" sx={{ width: "100%" ,gap:'7px' }}>
                     <Box className="aligences">
-                      <HotelOutlinedIcon />
+                      <HotelOutlinedIcon sx={{color:'#CED3DD', fontSize:'20px'}}/>
                     </Box>
                     <Box
                       className="aligences"
@@ -125,11 +143,11 @@ function RemovePop({ setremovecom }) {
                     >
                       2
                     </Box>
-                  </Box>
-                  <Box className="dot"></Box>
-                  <Box className="iconndnum" sx={{ width: "15%" }}>
+                    <Box className="dot"></Box>
+
                     <Box className="aligences">
-                      <BathtubOutlinedIcon />
+                    <BathtubOutlinedIcon sx={{color:'#CED3DD', fontSize:'20px'}}/>
+
                     </Box>
                     <Box
                       className="aligences"
@@ -137,11 +155,10 @@ function RemovePop({ setremovecom }) {
                     >
                       2
                     </Box>
-                  </Box>
-                  <Box className="dot"></Box>
-                  <Box className="iconndnum" sx={{ width: "15%" }}>
+                    <Box className="dot"></Box>
+
                     <Box className="aligences">
-                      <HomeOutlinedIcon />
+                      <HomeOutlinedIcon sx={{color:'#CED3DD', fontSize:'20px'}}/>
                     </Box>
                     <Box
                       className="aligences"
@@ -149,19 +166,19 @@ function RemovePop({ setremovecom }) {
                     >
                       2BHK
                     </Box>
-                  </Box>
-                  <Box className="dot"></Box>
-                  <Box className="iconndnum" sx={{ width: "15%" }}>
+                    <Box className="dot"></Box>
+
                     <Box className="aligences">
-                      <HomeOutlinedIcon />
+                      <HotelOutlinedIcon sx={{color:'#CED3DD', fontSize:'20px'}} />
                     </Box>
                     <Box
                       className="aligences"
                       sx={{ color: "#4E5A6B", fontWeight: "600" }}
                     >
-                      2000sq.ft
+                      2000 sq.ft
                     </Box>
                   </Box>
+                  
                 </Box>
               </Box>
             </Box>
@@ -171,7 +188,7 @@ function RemovePop({ setremovecom }) {
                 <LibraryBooksIcon sx={{ fontSize: "16px" }} />
                 Handbook
               </Box>
-              <Box sx={{ color: "#5078E1" }}>View / Download</Box>
+              <Box sx={{ color: "#5078E1",cursor:'pointer' }}>View / Download</Box>
             </Box>
           </Box>
         </Box>
@@ -182,7 +199,7 @@ function RemovePop({ setremovecom }) {
             <Box className="removecomitem">
               <Box className="scrolremcon">
                 {data.map((item, index) => (
-                  <Box className="removitdiv" key={index}>
+                  <Box className="removitdiv" key={index} sx={{minHeight:'10%'}}>
                     <Box sx={{ fontWeight: "600", fontSize: "14px" }}>
                       {item.detail}
                     </Box>

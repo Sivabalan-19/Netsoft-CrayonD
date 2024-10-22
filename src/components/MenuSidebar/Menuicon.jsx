@@ -1,10 +1,12 @@
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
+import Divider from '@mui/material/Divider';
 import AddIcon from "@mui/icons-material/Add";
 import MenuItem from "@mui/material/MenuItem";
 import Dialog from "@mui/material/Dialog";
 import AmenitiPop from "../Popup/AmenitiesPopup/AmenitiPop";
 import React from "react";
+import '../../styles/Threepage.css'
 import { useState } from "react";
 import Pricingpop from "../Popup/PricingPopup/Pricingpop";
 import Utilitypop from "../Popup/UtilityPopup/Utilitypop";
@@ -95,25 +97,40 @@ export default function Menuicon() {
       >
         <AddIcon /> Customize
       </Button>
-
       <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
-      >
-        <MenuItem onClick={handleOpenPricingDialog}>
-          Add Pricing Component
-        </MenuItem>
-        <MenuItem onClick={handleOpenAmmunitiesDialog}>Add Ammunities</MenuItem>
-        <MenuItem onClick={handleOpenUtilityDialog}>Add Utilities</MenuItem>
-        <MenuItem onClick={handleOpendiscountDialog}>Add Discount</MenuItem>
-        <MenuItem onClick={handleopenremovecom}>Remove Component</MenuItem>
-      </Menu>
+      id="basic-menu"
+      anchorEl={anchorEl}
+      open={open}
+     
+      onClose={handleClose}
+      MenuListProps={{
+        "aria-labelledby": "basic-button",
+      }}
+    >
+      <MenuItem onClick={handleOpenPricingDialog}>
+        Add Pricing Component
+      </MenuItem>
+      <Divider sx={{width:'100%', marginLeft:'50px'}} />
 
+      <MenuItem onClick={handleOpenAmmunitiesDialog}>
+        Add Ammunities
+      </MenuItem>
+      
+      <Divider sx={{width:'100%', marginLeft:'50px'}} />
+
+      <MenuItem onClick={handleOpenUtilityDialog}>
+        Add Utilities
+      </MenuItem>
+      <Divider sx={{width:'100%', marginLeft:'50px'}} />
+      
+      <MenuItem onClick={handleOpendiscountDialog}>
+        Add Discount
+      </MenuItem>
+      <Divider sx={{width:'100%', marginLeft:'50px'}} />
+      <MenuItem onClick={handleopenremovecom}>
+        Remove Component
+      </MenuItem>
+    </Menu>
       <Dialog
         open={openPricingDialog}
         onClose={handleClosePricingDialog}
@@ -157,7 +174,7 @@ export default function Menuicon() {
         open={opendiscounDialog}
         onClose={handleclosediscountDialog}
         PaperProps={{
-          style: { height: "600px ", minWidth: "1100px" },
+          style: {  height: "700px", minWidth: "900px"  },
         }}
       >
         <Discountpop setDiscountDialog={setDiscountDialog} />
@@ -167,7 +184,7 @@ export default function Menuicon() {
         open={openremovecom}
         onClose={handlecloseremovecom}
         PaperProps={{
-          style: { height: "600px", minWidth: "1100px" },
+          style: { height: "700px", minWidth: "900px" },
         }}
       >
         <RemovePop setremovecom={setremovecom} />
