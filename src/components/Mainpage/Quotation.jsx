@@ -41,7 +41,6 @@ function Quotation() {
                 <Box className="qtuy">0%</Box>
                 <Box className="prie">$ 0</Box>
               </Box>
-             
             </Box>
             <Box className="refuntax">
               <Box className="amoudiscol">
@@ -49,7 +48,6 @@ function Quotation() {
                 <Box className="qtuy">3</Box>
                 <Box className="prie">$ 648.00</Box>
               </Box>
-             
             </Box>
             <Box style={{ height: "59%" }}></Box>
             <Box className="totoal">

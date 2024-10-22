@@ -9,8 +9,8 @@ import PrimaryInener from "./PrimaryInener";
 
 import { FaChevronDown } from "react-icons/fa";
 
-function InnerPricingpopup({selectedItem,setOpenPopup}) {
-  const [activeTab, setActiveTab] = useState('Lease');
+function InnerPricingpopup({ selectedItem, setOpenPopup }) {
+  const [activeTab, setActiveTab] = useState("Lease");
   const [act, setact] = useState("Yes");
   const [act1, setact1] = useState("Amount");
 
@@ -18,16 +18,16 @@ function InnerPricingpopup({selectedItem,setOpenPopup}) {
     { id: 1, name: "Lease" },
     { id: 2, name: "Sales" },
     { id: 3, name: "Manage" },
-    { id: 4, name: "Stay" }
+    { id: 4, name: "Stay" },
   ];
   const Chargeable = [
     { id: 1, label: "Yes" },
-    { id: 2, label: "No" }
+    { id: 2, label: "No" },
   ];
   const Component = [
     { id: 1, label: "Amount" },
     { id: 2, label: "UOM" },
-    { id: 3, label: "%" }
+    { id: 3, label: "%" },
   ];
 
   return (
@@ -40,8 +40,14 @@ function InnerPricingpopup({selectedItem,setOpenPopup}) {
       </Box>
 
       <Box className="innerpoptie">
-        <Box className="inpoptibox" sx={{backgroundColor:selectedItem.secodcol, color:selectedItem.primcolo}}>
-          <Box  sx={{marginLeft:'7px'}}>{selectedItem.conte} Component</Box>
+        <Box
+          className="inpoptibox"
+          sx={{
+            backgroundColor: selectedItem.secodcol,
+            color: selectedItem.primcolo,
+          }}
+        >
+          <Box sx={{ marginLeft: "7px" }}>{selectedItem.conte} Component</Box>
           <Box style={{ justifyContent: "end", marginRight: "12px" }}>
             <InfoOutlinedIcon />
           </Box>
@@ -149,15 +155,15 @@ function InnerPricingpopup({selectedItem,setOpenPopup}) {
             <Box className="col">
               <Box>Chargeble</Box>
               <Box className="category-tabs">
-              {Chargeable.map((category) => (
-  <Button
-    key={category.id}
-    className={act === category.label ? "active" : ""}
-    onClick={() => setact(category.label)}  
-  >
-    {category.label}
-  </Button>
-))}
+                {Chargeable.map((category) => (
+                  <Button
+                    key={category.id}
+                    className={act === category.label ? "active" : ""}
+                    onClick={() => setact(category.label)}
+                  >
+                    {category.label}
+                  </Button>
+                ))}
               </Box>
             </Box>
             <Box className="col">
@@ -177,32 +183,48 @@ function InnerPricingpopup({selectedItem,setOpenPopup}) {
           </Box>
         </Box>
 
-
         <Box className="biginput">
-          <Box className="RevenueType" style={{height:'40%', margin:'0'}}>UOM Value</Box>
+          <Box className="RevenueType" style={{ height: "40%", margin: "0" }}>
+            UOM Value
+          </Box>
           <Box className="inputbig">
-            <Box style={{height:'100%', width:'70%'}}><input type="text" className="inputbd"/></Box>
-            <Box style={{color:'#98A0AC', fontSize:'14px',height:'100%', width:'30%', display:'flex', justifyContent:'end', alignItems:'center'}} >$ / Monthly</Box>
+            <Box style={{ height: "100%", width: "70%" }}>
+              <input type="text" className="inputbd" />
+            </Box>
+            <Box
+              style={{
+                color: "#98A0AC",
+                fontSize: "14px",
+                height: "100%",
+                width: "30%",
+                display: "flex",
+                justifyContent: "end",
+                alignItems: "center",
+              }}
+            >
+              $ / Monthly
+            </Box>
           </Box>
         </Box>
 
-
         <Box className="buton4div">
-
-          <Box><Button
-            variant="outlined"
-            sx={{
-              backgroundColor: "#ffff",
-              color: "Black",
-              textTransform: "none",
-              height: "50%",
-              fontWeight: "600",
-              border: "2px solid #E4E8EE",
-            }}
-          >
-            Back
-          </Button></Box>
-          <Box><Button
+          <Box>
+            <Button
+              variant="outlined"
+              sx={{
+                backgroundColor: "#ffff",
+                color: "Black",
+                textTransform: "none",
+                height: "50%",
+                fontWeight: "600",
+                border: "2px solid #E4E8EE",
+              }}
+            >
+              Back
+            </Button>
+          </Box>
+          <Box>
+            <Button
               variant="contained"
               sx={{
                 backgroundColor: "#5078E1",
@@ -213,8 +235,8 @@ function InnerPricingpopup({selectedItem,setOpenPopup}) {
               }}
             >
               Create Pricing Component
-            </Button></Box>
-
+            </Button>
+          </Box>
         </Box>
       </Box>
     </Box>

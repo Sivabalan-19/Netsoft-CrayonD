@@ -131,7 +131,7 @@ function AmenitiPop({ openAmmunitiesDialog, setOpenAmmunitiesDialog }) {
 
           <Box className="tooglecon">
             {amindata.map((item, index) => (
-              <Box className="tooglecard" key={index} sx={{height:'50px'}}> 
+              <Box className="tooglecard" key={index} sx={{ height: "50px" }}>
                 <Box className="toggleimgcon">
                   <img src={img} alt="" />
                 </Box>
