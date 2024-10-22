@@ -37,10 +37,19 @@ function Quotation() {
 
             <Box className="refuntax">
               <Box className="amoudiscol">
-                <Box className="totalcm">Total Amount</Box>
-                <Box className="qtuy">3</Box>
-                <Box className="prie">$ 3,600.00</Box>
+                <Box className="totalcm">Total Refundable</Box>
+                <Box className="qtuy">0%</Box>
+                <Box className="prie">$ 0</Box>
               </Box>
+             
+            </Box>
+            <Box className="refuntax">
+              <Box className="amoudiscol">
+                <Box className="totalcm">Total Tax</Box>
+                <Box className="qtuy">3</Box>
+                <Box className="prie">$ 648.00</Box>
+              </Box>
+             
             </Box>
             <Box style={{ height: "59%" }}></Box>
             <Box className="totoal">

@@ -7,12 +7,21 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import MainPage from "./Pages/MainPage";
 import Pricingpop from "./components/Popup/PricingPopup/Pricingpop";
 import AmenitiPop from "./components/Popup/AmenitiesPopup/AmenitiPop";
+import PrimaryInener from "./components/Popup/PricingPopup/PrimaryInener";
 
 function App() {
   return (
     <Box className="App">
-      <Box className="MainSpa">
-        <MainPage />
+      <Box className="Mainhead">
+        <Head />
+      </Box>
+      <Box className="Mainbody">
+        <Box className="MainSide">
+          <Sidebar />
+        </Box>
+        <Box className="MainSpa">
+          <MainPage />
+        </Box>
       </Box>
     </Box>
   );

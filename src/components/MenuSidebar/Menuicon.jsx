@@ -118,7 +118,7 @@ export default function Menuicon() {
         open={openPricingDialog}
         onClose={handleClosePricingDialog}
         PaperProps={{
-          style: { height: "800px", width: "500px" },
+          style: { height: "550px", width: "500px" },
         }}
       >
         <Pricingpop
@@ -131,7 +131,7 @@ export default function Menuicon() {
         open={openAmmunitiesDialog}
         onClose={handleCloseAmmunitiesDialog}
         PaperProps={{
-          style: { height: "800px", width: "500px" },
+          style: { height: "600px", width: "500px" },
         }}
       >
         <AmenitiPop
@@ -144,7 +144,7 @@ export default function Menuicon() {
         open={openutilititiesDialog}
         onClose={handleCloseUtilitiesDialog}
         PaperProps={{
-          style: { height: "800px", width: "500px" },
+          style: { height: "600px", width: "500px" },
         }}
       >
         <Utilitypop
@@ -157,7 +157,7 @@ export default function Menuicon() {
         open={opendiscounDialog}
         onClose={handleclosediscountDialog}
         PaperProps={{
-          style: { height: "900px", minWidth: "1100px" },
+          style: { height: "600px ", minWidth: "1100px" },
         }}
       >
         <Discountpop setDiscountDialog={setDiscountDialog} />
@@ -167,7 +167,7 @@ export default function Menuicon() {
         open={openremovecom}
         onClose={handlecloseremovecom}
         PaperProps={{
-          style: { height: "900px", minWidth: "1100px" },
+          style: { height: "600px", minWidth: "1100px" },
         }}
       >
         <RemovePop setremovecom={setremovecom} />
