@@ -232,6 +232,7 @@ function RemovePop({ setremovecom }) {
             <Button
               variant="contained"
               sx={{
+                outline: "none", 
                 width: "100%",
                 textTransform: "none",
                 backgroundColor: "#5078E1",

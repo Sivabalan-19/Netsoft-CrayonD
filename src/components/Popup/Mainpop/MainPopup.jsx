@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Box, Button, Switch } from "@mui/material";
 
 import CloseIcon from "@mui/icons-material/Close";
@@ -7,15 +7,23 @@ import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import HotelOutlinedIcon from "@mui/icons-material/HotelOutlined";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import house from "../../../assets/house.png";
+import MyContext from "../../../context/Usecontext";
 import Dropdown from "../../Dropdown/AEDdropdown";
 import BathtubOutlinedIcon from "@mui/icons-material/BathtubOutlined";
-function Discountpop({ setopenmainpop }) {
-  const data = [
+function Discountpop({ setopenmainpop,filteredvil }) {
+
+  const {data} = useContext(MyContext)
+
+  const dataprice = [
     { detail: "Bill Name Here", prix: 1000 },
     { detail: "Bill Name Here", prix: 1000 },
     { detail: "Bill Name Here", prix: 1000 },
     { detail: "Bill Name Here", prix: 1000 },
   ];
+
+  const result = data.filter((word) => word.id == filteredvil);
+  
+
   return (
     <Box className="Discountpopto">
       <Box
@@ -105,7 +113,7 @@ function Discountpop({ setopenmainpop }) {
 
             <Box className="imageconee">
               <Box className="imagedishe">
-                <Box className="discoute">Jumeirah Estate</Box>
+                <Box className="discoute">{result[0].tit}</Box>
                 <Box
                   sx={{
                     color: "#98A0AC",
@@ -119,7 +127,7 @@ function Discountpop({ setopenmainpop }) {
                 </Box>
               </Box>
               <Box sx={{ fontSize: "14px", color: "#4E5A6B" }}>
-                Rubix Apartment, K Tower, Floor 1
+                {result[0].add}
               </Box>
               <Box>
                 <Box
@@ -139,7 +147,7 @@ function Discountpop({ setopenmainpop }) {
                       className="aligences"
                       sx={{ color: "#4E5A6B", fontWeight: "600" }}
                     >
-                      2
+                      {result[0].bed}
                     </Box>
                     <Box className="dot"></Box>
 
@@ -151,7 +159,7 @@ function Discountpop({ setopenmainpop }) {
                       className="aligences"
                       sx={{ color: "#4E5A6B", fontWeight: "600" }}
                     >
-                      2
+                      {result[0].tub}
                     </Box>
                     <Box className="dot"></Box>
 
@@ -162,7 +170,7 @@ function Discountpop({ setopenmainpop }) {
                       className="aligences"
                       sx={{ color: "#4E5A6B", fontWeight: "600" }}
                     >
-                      2BHK
+                      {result[0].home}BHK
                     </Box>
                     <Box className="dot"></Box>
 
@@ -173,7 +181,7 @@ function Discountpop({ setopenmainpop }) {
                       className="aligences"
                       sx={{ color: "#4E5A6B", fontWeight: "600" }}
                     >
-                      2000 sq.ft
+                      {result[0].sqft} sq.ft
                     </Box>
                   </Box>
                   
@@ -196,7 +204,7 @@ function Discountpop({ setopenmainpop }) {
 
             <Box className="removecomitem">
               <Box className="scrolremcon">
-                {data.map((item, index) => (
+                {dataprice.map((item, index) => (
                   <Box
                     className="removitdiv"
                     key={index}

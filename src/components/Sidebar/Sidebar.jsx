@@ -33,7 +33,7 @@ function Sidebar() {
     <Box className="Sidebarcont">
       <Box className="sidebari" style={{ height: "8%", alignItems: "end" }}>
         <SidebarIcon
-          icon={<ArrowForwardIosIcon style={{ fontSize: "18px" }} />}
+          icon={<ArrowForwardIosIcon style={{ fontSize: "18px" , backgroundColor:'#5078e1', padding:'5px', borderRadius:'20px'}} />}
         />
       </Box>
 

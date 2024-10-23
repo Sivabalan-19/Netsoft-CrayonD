@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../styles/MainSpace.css";
 import { Box } from "@mui/material";
 
+import MyContext from "../../context/Usecontext";
+
 function Quotation() {
+
+  const {data} = useContext(MyContext)
+
+  let totalPrice = 0;
+  for (let i = 0; i < data.length; i++) {
+      totalPrice+=data[i].price;
+  }
+   let tax = totalPrice/10;
+ 
   return (
     <Box className="Quotationdiv">
       <Box className="quotatiohead">Quotation Summary</Box>
@@ -19,8 +30,8 @@ function Quotation() {
             <Box className="amountanddis">
               <Box className="amoudiscol">
                 <Box className="totalcm">Total Amount</Box>
-                <Box className="qtuy">3</Box>
-                <Box className="prie">$ 3,600.00</Box>
+                <Box className="qtuy">{data.length}</Box>
+                <Box className="prie">$ {totalPrice}.00</Box>
               </Box>
 
               <Box className="amoudiscol">
@@ -30,7 +41,7 @@ function Quotation() {
                   className="prie"
                   style={{ fontWeight: "normal", color: "#4E5A6B" }}
                 >
-                  - $ 100.00
+                  - $ {tax}.00
                 </Box>
               </Box>
             </Box>
@@ -45,7 +56,7 @@ function Quotation() {
             <Box className="refuntax">
               <Box className="amoudiscol">
                 <Box className="totalcm">Total Tax</Box>
-                <Box className="qtuy">3</Box>
+                <Box className="qtuy">{data.length}</Box>
                 <Box className="prie">$ 648.00</Box>
               </Box>
             </Box>
@@ -57,7 +68,7 @@ function Quotation() {
                 </Box>
 
                 <Box className="prie" style={{ fontWeight: "600" }}>
-                  $ 3,600.00
+                  $ {totalPrice}.00
                 </Box>
               </Box>
             </Box>

@@ -9,9 +9,9 @@ import PrimaryInener from "./PrimaryInener";
 
 import { FaChevronDown } from "react-icons/fa";
 
-function InnerPricingpopup({ selectedItem, setopenremaingpop }) {
+function Twochanges({ selectedItem, setopentwopop,twochagelist }) {
   const [activeTab, setActiveTab] = useState("Lease");
-  const [act, setact] = useState("Yes");
+  const [act, setact] = useState("Monthly");
   const [act1, setact1] = useState("Amount");
 
   const categories = [
@@ -20,21 +20,13 @@ function InnerPricingpopup({ selectedItem, setopenremaingpop }) {
     { id: 3, name: "Manage" },
     { id: 4, name: "Stay" },
   ];
-  const Chargeable = [
-    { id: 1, label: "Yes" },
-    { id: 2, label: "No" },
-  ];
-  const Component = [
-    { id: 1, label: "Amount" },
-    { id: 2, label: "UOM" },
-    { id: 3, label: "%" },
-  ];
+
 
   return (
     <Box className="innerpopcon">
       <Box className="pricehed" sx={{ height: "7%", width: "95%" }}>
         <Box sx={{ fontWeight: "700" }}>Add Discount To Unit</Box>
-        <Box sx={{ color: "#7C8594" }} onClick={() => setopenremaingpop(false)}>
+        <Box sx={{ color: "#7C8594" }} onClick={() => setopentwopop(false)}>
           <CloseIcon />
         </Box>
       </Box>
@@ -157,7 +149,7 @@ function InnerPricingpopup({ selectedItem, setopenremaingpop }) {
             <Box className="col">
               <Box>Chargeble</Box>
               <Box className="category-tabs">
-                {Chargeable.map((category) => (
+                {twochagelist.map((category) => (
                   <Button
                     key={category.id}
                     sx={{outline: "none", textTransform:'none', fontWeight:'600'}}
@@ -169,21 +161,7 @@ function InnerPricingpopup({ selectedItem, setopenremaingpop }) {
                 ))}
               </Box>
             </Box>
-            <Box className="col">
-              <Box>Component Based On</Box>
-              <Box className="category-tabs">
-                {Component.map((category) => (
-                  <Button
-                    key={category}
-                    sx={{outline: "none", textTransform:'none', fontWeight:'600'}}
-                    className={act1 === category.label ? "active" : ""}
-                    onClick={() => setact1(category.label)}
-                  >
-                    {category.label}
-                  </Button>
-                ))}
-              </Box>
-            </Box>
+          
           </Box>
         </Box>
 
@@ -216,7 +194,7 @@ function InnerPricingpopup({ selectedItem, setopenremaingpop }) {
           <Box>
             <Button
               variant="outlined"
-              onClick={() => setopenremaingpop(false)}
+              onClick={() => setopentwopop(false)}
               sx={{
                 outline: "none", 
                 backgroundColor: "#ffff",
@@ -251,4 +229,4 @@ function InnerPricingpopup({ selectedItem, setopenremaingpop }) {
   );
 }
 
-export default InnerPricingpopup;
+export default Twochanges;

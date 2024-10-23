@@ -248,7 +248,7 @@ function Discountpop({ setDiscountDialog }) {
                             borderRadius:'4px 0px 0px 4px'
                           }}
                         >
-                          100,000
+                         <input type="text" className="aedbesidinp" placeholder="eg: 100"  />
                         </Box>
                         <Box style={{ color: "#091B29",
                             borderRadius:'0px 4px 4px 0px' }}>
@@ -272,6 +272,8 @@ function Discountpop({ setDiscountDialog }) {
               variant="contained"
               sx={{
                 width: "100%",
+              outline: "none", 
+
                 textTransform: "none",
                 backgroundColor: "#5078E1",
               }}

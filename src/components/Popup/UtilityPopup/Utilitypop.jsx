@@ -175,6 +175,7 @@ function Utilitypop({ setopenutilititiesDialog }) {
               variant="contained"
               sx={{
                 width: "100%",
+                outline: "none", 
                 textTransform: "none",
                 backgroundColor: "#5078E1",
               }}

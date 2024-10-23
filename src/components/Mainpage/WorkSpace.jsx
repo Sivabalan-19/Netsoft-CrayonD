@@ -8,7 +8,7 @@ import Quotation from "./Quotation";
 
 function WorkSpace() {
   return (
-    <Grid container style={{ width: "100%", height: "100%" }}>
+    <Grid container style={{ width: "100%", height: "100%",}}>
       <Grid item xs={4} className="Leaddetwork">
         <LeadDetails />
       </Grid>

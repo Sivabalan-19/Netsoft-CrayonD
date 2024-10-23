@@ -12,6 +12,8 @@ function Bottom() {
             variant="outlined"
             sx={{
               backgroundColor: "#ffff",
+              outline: "none", 
+
               color: "Black",
               textTransform: "none",
               height: "50%",
@@ -37,6 +39,8 @@ function Bottom() {
             <Button
               variant="outlined"
               sx={{
+              outline: "none", 
+
                 backgroundColor: "#ffff",
                 color: "Black",
                 fontWeight: "600",
@@ -56,6 +60,8 @@ function Bottom() {
               sx={{
                 backgroundColor: "#5078E1",
                 fontWeight: "600",
+              outline: "none", 
+
                 textTransform: "none",
                 height: "50%",
                 color: "white",

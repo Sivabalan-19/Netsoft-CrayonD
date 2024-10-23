@@ -369,6 +369,22 @@
   align-items: center;
 }
 
+.aedbesidinp{
+  width: 100%;
+  color: #98a0ac;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 70%;
+}
+
+.aedbesidinp::placeholder 
+{
+  font-style:italic ;
+  place-self: center;
+  font-size: 10px;
+  color: #98a0ac;
+}
 .removecomitem {
   /* background-color: red; */
   height: 93%;

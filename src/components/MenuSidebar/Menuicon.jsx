@@ -12,7 +12,7 @@ import Pricingpop from "../Popup/PricingPopup/Pricingpop";
 import Utilitypop from "../Popup/UtilityPopup/Utilitypop";
 import { Box } from "@mui/material";
 import RemovePop from "../Popup/RemovePopup/Remopop";
-import Discountpop from "../Popup/DiscountPopup/DiscountPop";
+import Discountpop from "../Popup/DiscountPopup/Discountpop";
 
 export default function Menuicon() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -87,6 +87,8 @@ export default function Menuicon() {
         size="small"
         sx={{
           border: "none",
+          outline: "none", 
+
           boxShadow: "none",
           fontWeight: "600",
           textTransform: "none",

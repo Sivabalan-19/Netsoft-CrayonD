@@ -15,7 +15,7 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 import CloseIcon from "@mui/icons-material/Close";
 
-function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
+function PrimaryInener({ selectedItem, setopenfirstpop }) {
   const progres = [
     { id: 1, cont: "Maximum", price: 100, value: 100, color: "#FF4B4B" },
     { id: 2, cont: "Recommended", price: 120, value: 60, color: "#5AC782" },
@@ -34,10 +34,10 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
 
 
   return (
-    <div className="innerpopcon">
+    <Box className="innerpopcon">
       <Box className="pricehed" sx={{ height: "7%", width: "95%" }}>
         <Box sx={{ fontWeight: "700" }}>Add Discount To Unit</Box>
-        <Box sx={{ color: "#7C8594",display:'flex', alignItems:'center' }} onClick={() => setOpenOtherPopup(false)}>
+        <Box sx={{ color: "#7C8594",display:'flex', alignItems:'center' }} onClick={() => setopenfirstpop(false)}>
           <CloseIcon />
         </Box>
       </Box>
@@ -61,7 +61,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
         </Box>
       </Box>
 
-      <div
+      <Box
         style={{
           display: "flex",
           height: "15%",
@@ -70,7 +70,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
           width: "92%",
         }}
       >
-        <div style={{ width: "48%" }}>
+        <Box style={{ width: "48%" }}>
           <Box className="RevenueType" sx={{ marginTop: "15px" }}>
             Revenue Type
           </Box>
@@ -78,7 +78,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
             {categories.map((category) => (
               <Button
                 key={category}
-                sx={{textTransform:'none', fontWeight:'600'}}
+                sx={{outline: "none", textTransform:'none', fontWeight:'600'}}
                 className={activeTab === category ? "active" : ""}
                 onClick={() => setActiveTab(category)}
               >
@@ -86,7 +86,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
               </Button>
             ))}
           </Box>
-        </div>
+        </Box>
 
         <Box className="col" sx={{ width: "48%" }}>
           <Box>Pricing Component</Box>
@@ -127,9 +127,9 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
             </FormControl>
           </Box>
         </Box>
-      </div>
+      </Box>
 
-      <div
+      <Box
         style={{
           height: "15%",
           width: "92%",
@@ -185,7 +185,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
             {Chargeble.map((category) => (
               <Button
                 key={category}
-                sx={{textTransform:'none', fontWeight:'600'}}
+                sx={{outline: "none", textTransform:'none', fontWeight:'600'}}
                 className={act === category ? "active" : ""}
                 onClick={() => setact(category)}
               >
@@ -194,7 +194,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
             ))}
           </Box>
         </Box>
-      </div>
+      </Box>
 
       <Box
         className="biginput"
@@ -237,9 +237,9 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
         </Box>
       </Box>
 
-      <div className="progescont">
+      <Box className="progescont">
         {progres.map((item, index) => (
-          <div
+          <Box
             style={{
               width: "33%",
               height: "100%",
@@ -249,9 +249,9 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
             }}
             key={index}
           >
-            <div style={{ color: "#98A0AC", fontSize: "12px" }}>
+            <Box style={{ color: "#98A0AC", fontSize: "12px" }}>
               {item.cont}
-            </div>
+            </Box>
             <LinearProgress
               variant="determinate"
               value={item.value}
@@ -266,7 +266,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
                 borderRadius: "5px",
               }}
             />
-            <div
+            <Box
               style={{
                 height: "35%",
                 width: "90%",
@@ -279,19 +279,20 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
             >
               {" "}
               $ {item.price}
-            </div>
-            <div style={{ color: "#98A0AC", fontSize: "12px" }}>
+            </Box>
+            <Box style={{ color: "#98A0AC", fontSize: "12px" }}>
               Sq. Yard/Monthly
-            </div>
-          </div>
+            </Box>
+          </Box>
         ))}
-      </div>
+      </Box>
       <Box className="buton4div" sx={{ width: "92%" }}>
         <Box>
           <Button
             variant="outlined"
-            onClick={() => setOpenOtherPopup(false)}
+            onClick={() => setopenfirstpop(false)}
             sx={{
+              outline: "none", 
               backgroundColor: "#ffff",
               color: "Black",
               textTransform: "none",
@@ -307,6 +308,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
           <Button
             variant="contained"
             sx={{
+              outline: "none", 
               backgroundColor: "#5078E1",
               fontWeight: "600",
               textTransform: "none",
@@ -318,7 +320,7 @@ function PrimaryInener({ selectedItem, setOpenOtherPopup }) {
           </Button>
         </Box>
       </Box>
-    </div>
+    </Box>
   );
 }
 

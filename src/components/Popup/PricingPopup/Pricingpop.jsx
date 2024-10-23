@@ -7,11 +7,27 @@ import "../../../styles/Popupstye/Pricepop.css";
 import PrimaryInener from "./PrimaryInener";
 import Card from "@mui/material/Card";
 import InnerPricingpopup from "./InnerPricingpopup";
+import Twochanges from "./Twochange";
 
 function Pricingpop({ setOpenPricingDialog }) {
-  const [openPopup, setOpenPopup] = useState(false);
-  const [openOtherPopup, setOpenOtherPopup] = useState(false);
+  const [openfirstpop, setopenfirstpop] = useState(false);
+  const [opentwopop, setopentwopop] = useState(false);
+  const [openremaingpop, setopenremaingpop] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+
+  const [twochagelist, settwochnaglist] = useState(null);
+
+
+  const refund = [
+    { id: 1, label: "Amount" },
+    { id: 2, label: "Rental" },
+    { id: 3, label: "%" },
+  ];
+
+  const Component = [
+    { id: 1, label: "Monthly" },
+    { id: 2, label: "Total" }
+  ];
 
   const listofpri = [
     { sno: 1, conte: "Primary", primcolo: "#B3776D", secodcol: "#FEEAEA80" },
@@ -45,12 +61,20 @@ function Pricingpop({ setOpenPricingDialog }) {
   const handleCardClick = (item) => {
     setSelectedItem(item);
     if (item.sno === 1) {
-      setOpenOtherPopup(true);
-    } else {
-      setOpenPopup(true);
+      setopenfirstpop(true); 
+    } else if (item.sno === 4) {
+      setopentwopop(true); 
+      settwochnaglist(refund)
+    } 
+    else if ( item.sno === 5) {
+      setopentwopop(true); 
+      settwochnaglist(Component)
+    }else {
+      setopenremaingpop(true); 
     }
   };
-
+  console.log(twochagelist)
+  
   return (
     <Box className="pricepopcon">
       <Box className="pricehed">
@@ -66,7 +90,7 @@ function Pricingpop({ setOpenPricingDialog }) {
       <Box className="pricingpopcon">
         {listofpri.map((item, index) => (
           <Card
-          sx={{boxShadow:'none'}}
+            sx={{ boxShadow: 'none' }}
             className="pricepopdiv"
             key={index}
             style={{ backgroundColor: item.secodcol }}
@@ -95,28 +119,42 @@ function Pricingpop({ setOpenPricingDialog }) {
       </Box>
 
       <Dialog
-        open={openPopup}
-        onClose={() => setOpenPopup(false)}
-        PaperProps={{
-          style: { height: "550px", width: "500px" },
-        }}
-      >
-        <InnerPricingpopup
-          selectedItem={selectedItem}
-          setOpenPopup={setOpenPopup}
-        />
-      </Dialog>
-
-      <Dialog
-        open={openOtherPopup}
-        onClose={() => setOpenOtherPopup(false)}
+        open={openfirstpop}
+        onClose={() => setopenfirstpop(false)}
         PaperProps={{
           style: { height: "550px", width: "500px" },
         }}
       >
         <PrimaryInener
           selectedItem={selectedItem}
-          setOpenOtherPopup={setOpenOtherPopup}
+          setopenfirstpop={setopenfirstpop}
+        />
+      </Dialog>
+
+      <Dialog
+        open={opentwopop}
+        onClose={() => setopentwopop(false)}
+        PaperProps={{
+          style: { height: "550px", width: "500px" },
+        }}
+      >
+        <Twochanges 
+          selectedItem={selectedItem}
+          refund={refund}
+          twochagelist={twochagelist}
+          setopentwopop={setopentwopop}
+        />
+      </Dialog>
+      <Dialog
+        open={openremaingpop}
+        onClose={() => setopenremaingpop(false)}
+        PaperProps={{
+          style: { height: "550px", width: "500px" },
+        }}
+      >
+        <InnerPricingpopup
+          selectedItem={selectedItem}
+          setopenremaingpop={setopenremaingpop}
         />
       </Dialog>
     </Box>
